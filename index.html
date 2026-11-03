@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f7fb">
+  <meta name="description" content="هم‌قدم؛ برنامه‌ریزی، تمرکز و پیگیری مسیر کنکور، قدم‌به‌قدم.">
+  <title>هم‌قدم | همراه روزهای کنکور</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="منوی اصلی">
+      <a class="brand" href="#" aria-label="هم‌قدم، صفحه‌ی خانه">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M7 20.5 15.8 7l9.1 13.5h-5.3L16 14l-3.5 6.5H7Z" fill="currentColor"/><path d="M8 24h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </span>
+        <span><strong>هم‌قدم</strong><small>تا روزِ موفقیت</small></span>
+      </a>
+
+      <div class="nav-caption">فضای مطالعه</div>
+      <nav class="main-nav">
+        <button class="nav-item active" data-view="dashboard" aria-current="page"><span class="nav-icon">⌂</span>داشبورد</button>
+        <button class="nav-item" data-view="planner"><span class="nav-icon">▦</span>برنامه‌ی من</button>
+        <button class="nav-item" data-view="progress"><span class="nav-icon">◷</span>گزارش پیشرفت</button>
+        <button class="nav-item" data-view="subjects"><span class="nav-icon">▤</span>درس‌های من</button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-note">
+        <div class="note-stars" aria-hidden="true">✦ <span>✦</span></div>
+        <strong>هر قدم کوچیکه،<br>اما تو رو جلو می‌بره.</strong>
+        <span>امروز فقط روی قدم بعدی تمرکز کن.</span>
+        <div class="note-doodle" aria-hidden="true">〰</div>
+      </div>
+      <button class="profile-button" aria-label="نمایه‌ی دانش‌آموز">
+        <span class="avatar">ن</span>
+        <span class="profile-copy"><strong>نرگس احمدی</strong><small>داوطلب کنکور</small></span>
+        <span class="profile-more" aria-hidden="true">···</span>
+      </button>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">⌃</span><strong>هم‌قدم</strong></div>
+        <div class="breadcrumb"><span>فضای من</span><span class="breadcrumb-sep">/</span><strong id="page-label">داشبورد</strong></div>
+        <div class="topbar-actions">
+          <span class="today-date" id="today-date"></span>
+          <button class="icon-button notification-button" aria-label="اعلان‌ها"><span aria-hidden="true">♧</span><i></i></button>
+          <button class="install-button" id="install-button" hidden>نصب اپ <span aria-hidden="true">↓</span></button>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <section class="view active" id="view-dashboard" aria-labelledby="welcome-title">
+          <div class="welcome-row">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> <span id="weekday-greeting"></span>، یه شروع تازه</p>
+              <h1 id="welcome-title">سلام نرگس <span class="wave">✦</span></h1>
+              <p class="welcome-subtitle">قرار نیست همه‌چیز رو یک‌روزه انجام بدی؛ فقط همین قدم امروز.</p>
+            </div>
+            <button class="date-pill" data-action="today"><span aria-hidden="true">▦</span><span id="full-date"></span><span aria-hidden="true">⌄</span></button>
+          </div>
+
+          <section class="hero-card" aria-label="تمرکز امروز">
+            <div class="hero-copy">
+              <span class="hero-chip"><span>✦</span> قدم‌به‌قدم تا هدفت</span>
+              <h2>آینده‌ات با همین<br><em>امروزها</em> ساخته می‌شه.</h2>
+              <p>با یه شروع کوچیک، به خودت نشون بده که می‌تونی.</p>
+              <button class="hero-cta" data-action="focus">شروع یک جلسه‌ی تمرکز <span aria-hidden="true">←</span></button>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="art-sun"></div><div class="art-blob"></div>
+              <svg class="student-illustration" viewBox="0 0 290 230" role="img">
+                <path d="M62 205c12-37 34-56 81-57 43-1 75 17 89 57H62Z" fill="#7956d8"/>
+                <path d="M104 149c7 21 20 31 39 31s33-10 42-31l-12-25h-55l-14 25Z" fill="#f3bd91"/>
+                <path d="M108 82c0-30 17-49 42-49 29 0 45 21 43 53l-2 30c-2 27-19 45-42 45-24 0-40-19-41-44V82Z" fill="#f8c7a2"/>
+                <path d="M107 93c-8-30 1-62 32-68 20-4 42 5 53 24 8 14 7 28 1 43-5-7-8-14-10-23-15 13-38 18-61 13l-3 24-12-13Z" fill="#28314d"/>
+                <path d="M127 106c4-3 9-3 13 0m22 0c4-3 9-3 13 0" fill="none" stroke="#413248" stroke-width="3" stroke-linecap="round"/>
+                <path d="M144 124c5 4 11 4 16 0" fill="none" stroke="#c66e72" stroke-width="3" stroke-linecap="round"/>
+                <path d="M102 142c-17 12-29 30-34 55h58l10-25-24-30Zm91 0c17 11 29 29 34 55h-58l-10-25 34-30Z" fill="#eee7ff"/>
+                <path d="M87 198h119l-9 12H97l-10-12Z" fill="#f3be55"/>
+                <path d="m118 170 28 25 29-25" fill="none" stroke="#c8b7f4" stroke-width="3"/>
+                <path d="M59 82c5-7 11-7 16 0-5 7-11 7-16 0Zm166-29c5-7 11-7 16 0-5 7-11 7-16 0Z" fill="#f3be55"/>
+                <path d="m222 114 4 8 9 2-7 6 1 9-7-5-8 4 3-9-6-6 9-1 2-8Z" fill="#9cd8c2"/>
+                <circle cx="73" cy="133" r="5" fill="#f2a88f"/><circle cx="222" cy="170" r="4" fill="#f2a88f"/>
+              </svg>
+              <div class="art-caption"><span>🌱</span> رشد، با قدم‌های کوچیک</div>
+            </div>
+            <div class="hero-decoration" aria-hidden="true">✳</div>
+          </section>
+
+          <section class="stats-grid" aria-label="آمار امروز">
+            <article class="stat-card stat-purple">
+              <div class="stat-top"><span class="stat-icon">◷</span><span class="stat-label">زمان مطالعه</span><span class="stat-trend">این هفته</span></div>
+              <div class="stat-value"><strong id="study-hours">۳٫۵</strong><span>ساعت</span></div>
+              <div class="stat-progress"><span style="width:48%"></span></div>
+              <p>از ۷ ساعت هدف هفتگی</p>
+            </article>
+            <article class="stat-card stat-mint">
+              <div class="stat-top"><span class="stat-icon">✓</span><span class="stat-label">کارهای انجام‌شده</span><span class="stat-trend">امروز</span></div>
+              <div class="stat-value"><strong id="done-count">۲</strong><span>از <b id="task-count">۵</b> کار</span></div>
+              <div class="stat-progress"><span id="tasks-progress" style="width:40%"></span></div>
+              <p>آفرین! داری عالی پیش می‌ری</p>
+            </article>
+            <article class="stat-card stat-peach">
+              <div class="stat-top"><span class="stat-icon">♧</span><span class="stat-label">روزهای پیوسته</span><span class="stat-trend">رکورد تو</span></div>
+              <div class="stat-value"><strong>۷</strong><span>روز</span></div>
+              <div class="streak-dots" aria-label="هفت روز پیاپی مطالعه"><i></i><i></i><i></i><i></i><i></i><i></i><i class="current"></i></div>
+              <p>یه هفته‌ی کامل، دمت گرم!</p>
+            </article>
+          </section>
+
+          <div class="dashboard-grid">
+            <section class="panel tasks-panel" aria-labelledby="tasks-heading">
+              <div class="panel-heading">
+                <div><p class="section-kicker">برنامه‌ی امروز</p><h2 id="tasks-heading">قدم‌های امروزت <span class="heading-sparkle">✳</span></h2></div>
+                <button class="text-button" data-view-link="planner">برنامه‌ی کامل <span aria-hidden="true">←</span></button>
+              </div>
+              <div class="task-list" id="task-list"></div>
+              <button class="add-task-button" data-action="add-task"><span>＋</span> اضافه کردن کار جدید</button>
+            </section>
+
+            <section class="panel focus-panel" aria-labelledby="focus-heading">
+              <div class="panel-heading">
+                <div><p class="section-kicker">یه نفس عمیق</p><h2 id="focus-heading">زمان تمرکز <span class="heading-sparkle">✳</span></h2></div>
+                <button class="more-button" aria-label="گزینه‌های زمان‌سنج">···</button>
+              </div>
+              <div class="timer-wrap">
+                <svg class="timer-ring" viewBox="0 0 180 180" aria-hidden="true"><circle class="timer-track" cx="90" cy="90" r="76"/><circle class="timer-progress" id="timer-progress" cx="90" cy="90" r="76"/></svg>
+                <div class="timer-label"><strong id="timer-value">۲۵:۰۰</strong><span id="timer-mode">دقیقه‌ی تمرکز</span></div>
+              </div>
+              <div class="timer-actions">
+                <button class="timer-start" id="timer-toggle">شروع تمرکز <span aria-hidden="true">▶</span></button>
+                <button class="timer-reset" id="timer-reset" aria-label="شروع دوباره‌ی زمان‌سنج">↺</button>
+              </div>
+              <p class="focus-tip"><span>✦</span> حواست فقط به همین لحظه باشه.</p>
+            </section>
+          </div>
+
+          <section class="panel subjects-panel" aria-labelledby="subjects-heading">
+            <div class="panel-heading">
+              <div><p class="section-kicker">آروم و پیوسته</p><h2 id="subjects-heading">درس‌های این هفته <span class="heading-sparkle">✳</span></h2></div>
+              <button class="text-button" data-view-link="subjects">همه‌ی درس‌ها <span aria-hidden="true">←</span></button>
+            </div>
+            <div class="subject-list">
+              <article class="subject-item subject-lilac"><span class="subject-symbol">∑</span><div class="subject-info"><strong>ریاضی</strong><small>فصل تابع و حد</small></div><div class="subject-bar"><span style="width:68%"></span></div><strong class="subject-percent">۶۸٪</strong></article>
+              <article class="subject-item subject-green"><span class="subject-symbol">⚛</span><div class="subject-info"><strong>فیزیک</strong><small>حرکت‌شناسی</small></div><div class="subject-bar"><span style="width:42%"></span></div><strong class="subject-percent">۴۲٪</strong></article>
+              <article class="subject-item subject-yellow"><span class="subject-symbol">⚗</span><div class="subject-info"><strong>شیمی</strong><small>ساختار اتم</small></div><div class="subject-bar"><span style="width:81%"></span></div><strong class="subject-percent">۸۱٪</strong></article>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="view-planner" aria-labelledby="planner-title">
+          <div class="view-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span> برنامه‌ریزی، بدون فشار</p><h1 id="planner-title">برنامه‌ی من <span class="wave">✦</span></h1><p class="welcome-subtitle">هر تیک یه قدم نزدیک‌تر به هدفته.</p></div><button class="primary-button" data-action="add-task">＋ کار جدید</button></div>
+          <section class="panel planner-panel"><div class="panel-heading"><div><p class="section-kicker">روزهای هفته</p><h2 id="planner-day-title">برنامه‌ی امروز</h2></div><span class="week-label" id="week-label"></span></div><div class="week-strip" id="week-strip"></div><div class="planner-task-list" id="planner-task-list"></div></section>
+          <div class="gentle-card"><span>🌼</span><div><strong>یادت باشه استراحت هم جزو برنامه‌ست!</strong><p>بعد از هر ۴۵ دقیقه مطالعه، ۱۰ دقیقه به خودت استراحت بده.</p></div></div>
+        </section>
+
+        <section class="view" id="view-progress" aria-labelledby="progress-title">
+          <div class="view-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span> پیشرفتت ارزش دیدن داره</p><h1 id="progress-title">گزارش پیشرفت <span class="wave">✦</span></h1><p class="welcome-subtitle">به مسیری که تا اینجا اومدی نگاه کن.</p></div><span class="report-pill">این هفته <span>⌄</span></span></div>
+          <div class="report-cards"><article class="report-card stat-purple"><span>ساعت مطالعه</span><strong>۱۸٫۵ <small>ساعت</small></strong><p>↑ ۱۲٪ بیشتر از هفته‌ی قبل</p></article><article class="report-card stat-mint"><span>کارهای تکمیل‌شده</span><strong id="report-done">۱۲ <small>کار</small></strong><p>از ۱۵ کار برنامه‌ریزی‌شده</p></article><article class="report-card stat-peach"><span>روزهای پیوسته</span><strong>۷ <small>روز</small></strong><p>رکورد تازه‌ت رو ثبت کردی!</p></article></div>
+          <section class="panel chart-panel"><div class="panel-heading"><div><p class="section-kicker">قدم‌های کوچیک، نتیجه‌های بزرگ</p><h2>زمان مطالعه‌ی روزانه</h2></div><span class="chart-legend"><i></i> ساعت مطالعه</span></div><div class="chart" role="img" aria-label="نمودار میله‌ای ساعت مطالعه در روزهای هفته"><div class="chart-y"><span>۶</span><span>۴</span><span>۲</span><span>۰</span></div><div class="chart-bars"><div><i style="height:46%"><b>۲٫۵</b></i><span>ش</span></div><div><i style="height:72%"><b>۴</b></i><span>ی</span></div><div><i style="height:58%"><b>۳</b></i><span>د</span></div><div><i style="height:87%"><b>۵</b></i><span>س</span></div><div><i style="height:40%"><b>۲</b></i><span>چ</span></div><div><i style="height:67%"><b>۳٫۵</b></i><span>پ</span></div><div><i style="height:25%" class="today-bar"><b>۱</b></i><span>ج</span></div></div></div></section>
+          <div class="gentle-card"><span>💜</span><div><strong>پیشرفت همیشه خط صاف نیست.</strong><p>مهم اینه که بعد از هر مکث، دوباره راهت رو ادامه می‌دی.</p></div></div>
+        </section>
+
+        <section class="view" id="view-subjects" aria-labelledby="all-subjects-title">
+          <div class="view-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span> برنامه‌ی متعادل، ذهن آروم</p><h1 id="all-subjects-title">درس‌های من <span class="wave">✦</span></h1><p class="welcome-subtitle">درس‌هات رو با حوصله و به ترتیب پیش ببر.</p></div></div>
+          <div class="all-subjects">
+            <article class="subject-detail subject-lilac"><span class="subject-symbol">∑</span><div><p class="section-kicker">درس تخصصی</p><h2>ریاضی</h2><p>فصل فعلی: تابع و حد</p><div class="subject-bar"><span style="width:68%"></span></div><small>۶۸٪ از برنامه‌ی این درس</small></div><span class="subject-detail-mark">✦</span></article>
+            <article class="subject-detail subject-green"><span class="subject-symbol">⚛</span><div><p class="section-kicker">درس تخصصی</p><h2>فیزیک</h2><p>فصل فعلی: حرکت‌شناسی</p><div class="subject-bar"><span style="width:42%"></span></div><small>۴۲٪ از برنامه‌ی این درس</small></div><span class="subject-detail-mark">✦</span></article>
+            <article class="subject-detail subject-yellow"><span class="subject-symbol">⚗</span><div><p class="section-kicker">درس تخصصی</p><h2>شیمی</h2><p>فصل فعلی: ساختار اتم</p><div class="subject-bar"><span style="width:81%"></span></div><small>۸۱٪ از برنامه‌ی این درس</small></div><span class="subject-detail-mark">✦</span></article>
+          </div>
+        </section>
+      </div>
+      <footer class="footer"><span>با حوصله، با هم‌قدم <span>💜</span></span><span>پیشرفت تو ارزش جشن گرفتن داره.</span></footer>
+    </main>
+  </div>
+
+  <nav class="mobile-nav" aria-label="پیمایش موبایل">
+    <button class="mobile-nav-item active" data-view="dashboard"><span>⌂</span>خانه</button>
+    <button class="mobile-nav-item" data-view="planner"><span>▦</span>برنامه</button>
+    <button class="mobile-nav-item" data-view="progress"><span>◷</span>پیشرفت</button>
+    <button class="mobile-nav-item" data-view="subjects"><span>▤</span>درس‌ها</button>
+  </nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="task-dialog" id="task-dialog">
+    <form method="dialog" id="task-form">
+      <div class="dialog-heading"><div><p class="section-kicker">قدم بعدی تو</p><h2>یه کار تازه اضافه کن</h2></div>      <button class="dialog-close" type="button" aria-label="بستن">×</button></div>
+      <label for="task-title">عنوان کار</label><input id="task-title" name="title" maxlength="70" required placeholder="مثلاً مرور تست‌های ریاضی">
+      <label for="task-subject">درس</label><select id="task-subject" name="subject"><option>ریاضی</option><option>فیزیک</option><option>شیمی</option><option>زیست‌شناسی</option><option>عمومی</option></select>
+      <label for="task-time">زمان پیشنهادی</label><input id="task-time" name="time" maxlength="30" placeholder="مثلاً ۴۵ دقیقه">
+      <div class="dialog-actions"><button class="primary-button" type="submit">اضافه کردن</button><button class="cancel-button" type="button">بی‌خیال</button></div>
+    </form>
+  </dialog>
+</body>
+</html>

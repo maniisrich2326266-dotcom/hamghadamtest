@@ -1,0 +1,16 @@
+{
+  "name": "هم‌قدم | همراه روزهای کنکور",
+  "short_name": "هم‌قدم",
+  "description": "برنامه‌ریزی، تمرکز و پیگیری مسیر کنکور، قدم‌به‌قدم.",
+  "lang": "fa-IR",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8f7fb",
+  "theme_color": "#f8f7fb",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
