@@ -45,7 +45,7 @@ class AppHandler(SimpleHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    host = os.environ.get("HAMGHADAM_HOST", "127.0.0.1")
+  host = "0.0.0.0"
     port = int(os.environ.get("PORT", "8000"))
     server = ThreadingHTTPServer((host, port), AppHandler)
     print(f"HamGhadam is running at http://{host}:{port}")
